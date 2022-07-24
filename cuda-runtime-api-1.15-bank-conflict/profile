@@ -1,0 +1,6 @@
+#!/bin/bash
+
+make pro
+/datav/lean/cuda-11.2/bin/nsys profile --stats=true --export=none workspace/pro
+
+rm *.qdrep *.sqlite

@@ -1,0 +1,7 @@
+
+HDDL BUILD: 1909
+HDDL MVNC: 856206ba3729b4701e286bf19a9661b648e34c96
+HDDL BSL: d0ac23f595cb501c466074530bbfa8fbf6fc6ad4
+HDDL Service: 23a7abdd9d201a37eddf16a1010e0f855c8c70cf
+HDDL Drivers: 671dcbfc83ceb5f8bfcf0f5810a3f48c2407e2a9
+                        

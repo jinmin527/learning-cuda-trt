@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // python debug
+        {
+            "name": "Python file",
+            "type": "python",
+            "request": "launch",
+            // "program": "${file}", 
+            "program": "src/main.py", 
+            "console": "integratedTerminal",
+            "justMyCode": true // false 的话 你可以进入一些库的源码里面进行调试，比如说进入pytorch的一部分源码
+        },
+        // c++ debug
+        {
+            "name": "C++ file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/workspace/pro", // 你要调试的文件，这里指的是cpp最终生成的可执行文件
+            "args": [],
+                    "environment": [{"name": "LD_LIBRAYRY_PATH", "value": "$(LD_LIBRAYRY_PATH):/mypath/to/lib/"}], 
+                    // 相当于直接 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mypath/to/lib/ 
+            "stopAtEntry": false, 
+            "cwd": "${workspaceFolder}/workspace", // c++在运行过程时会在这寻找依赖和其他文件（比如说 图片）
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build" // 在运行launch之前先运行tasks.json里的东西
+        }
+    ]
+}

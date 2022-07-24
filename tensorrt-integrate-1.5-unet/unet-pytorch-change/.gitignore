@@ -1,0 +1,3 @@
+*.onnx
+*.pth
+__pycache__
